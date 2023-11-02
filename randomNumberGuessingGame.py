@@ -12,11 +12,15 @@ while chance > 0:
         print("Great, You nailed it!"); 
         break 
     elif guess < random_number: 
-        print("low"); 
+        print("low");
+        if chance > 0: 
+            print("You have", chance, "chance(s) left."); 
+        else: 
+            print("Sorry, you're out of chances. The number was", random_number); 
     else: 
-        print("high!"); 
+        print("high!");
+        if chance > 0: 
+            print("You have", chance, "chance(s) left."); 
+        else: 
+            print("Sorry, you're out of chances. The number was", random_number);
 
-if chance > 0: 
-    print("You have", chance, "chance(s) left."); 
-else: 
-    print("Sorry, you're out of chances. The number was", random_number);
